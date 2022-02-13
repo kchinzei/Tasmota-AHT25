@@ -1,10 +1,8 @@
-# Tasmota-AHT25
+# Tasmota-Experiment
 
 Private UserMod for Tasmota
 
 It's a usermod of [Tasmota](https://tasmota.github.io/docs/) for ESP8266 with small (< 2MB) flash.
-PCA9xxx is an I2C based PWM controller chips from NXP.
-
 At this moment I don't have a plan to ask a pull request, because it's experimental.
 
 ## Build it
