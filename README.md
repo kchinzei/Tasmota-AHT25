@@ -13,6 +13,19 @@ Basically, this repository keeps its own files apart from [Tasmota](https://tasm
 This makes following updates in Tasmota easy.
 But you need to place the files into proper places before building Tasmota.
 
+- Copy `platformio_tasmota_cenv.ini` to `Tasmota`
+- Copy `user_config_override.h` to `Tasmota/tasmota`
+
+Overwrite existing one if there is. In Linux or macOS you can also use `ln` terminal command so that any changes to these files inside `Tasmota` folder will be visible by git commands.
+
+This modification is intended to
+- Make binary small so that it can do OTA on 2MB flash ESP8266.
+From experience, you need to make gzip'ed binary less than 500 kB.
+- Enable AHT-25 temp/humid sensor.
+- Enable Ikea Vindriktning air quality sensor.
+
+See [Compiling](https://tasmota.github.io/docs/Compile-your-build/#customize-your-build) for detail.
+
 ## License
 
 MIT License
